@@ -9,18 +9,13 @@ class Covid extends React.Component {
     let data = this.props.data;
 
     return (
-      <div className="back">
-        <br />
-        <br />
-        <div className="header">
-          <CardTitle tag="h1">
-            สถานการณ์ผู้ติดเชื้อ Covid-19 ในประเทศไทย
-          </CardTitle>
-          <br />
-          <br />
-          <CardTitle tag="h5">ข้อมูล ณ วันที่ {data.UpdateDate}</CardTitle>
-        </div>
-        <div className="right-content">
+      <div className="container">
+        <br></br>
+        <h1>สถานการณ์ผู้ติดเชื้อ Covid-19 ในประเทศไทย</h1>
+        <br></br>
+        <h5>ข้อมูล ณ วันที่ {data.UpdateDate}</h5>
+        <br></br>
+        <div className="col">
           <Row>
             <Col md={{ size: 8, offset: 2 }}>
               <Card body inverse color="Confirmed">
@@ -111,7 +106,11 @@ class Covid extends React.Component {
               </Card>
             </Col>
           </Row>
-          แหล่งที่มา : https://covid19.th-stat.com/
+        </div>
+        <div className="footer">
+          <a href="https://covid19.th-stat.com/">
+            แหล่งที่มา : https://covid19.th-stat.com/
+          </a>
         </div>
       </div>
     );
